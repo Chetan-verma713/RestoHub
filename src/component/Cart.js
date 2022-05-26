@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import CartDiv from './CartDiv';
+import GetNum from './CartDiv';
 
 const Cart = ({ items }) => {
     const [total, setTotal] = useState(0);
+    // console.log(GetNum);
     return (
         <div className="dishes-container">
             <div className="item-place">
@@ -12,38 +15,7 @@ const Cart = ({ items }) => {
             <br />
             <div className="container container-dishes">
                 {items.map(s => (
-                    <div className="card card-dish" key={s.id}>
-                        <img
-                            className="card-img-top"
-                            src={s.image}
-                            alt="Card image cap"
-                        />
-                        <div className="card-body">
-                            <h5 className="card-title">{s.name}</h5>
-                            <span className="price">{s.price}</span>
-                            <p className="card-text">{s.desc}</p>
-
-                            <div
-                                className="btn-group"
-                                role="group"
-                                aria-label="Basic example"
-                            >
-                                <button
-                                    type="button"
-                                    className="btn btn-danger"
-                                >
-                                    -
-                                </button>
-                                <input type="text" value={1} readOnly className='input-counter'/>
-                                <button
-                                    type="button"
-                                    className="btn btn-success"
-                                >
-                                    +
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                    <CartDiv item={s} key={s.id} />
                 ))}
             </div>
             <hr />

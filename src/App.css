@@ -129,6 +129,21 @@
 }
 
 .input-counter {
-    width: 2rem;
-    padding-left: .5rem;
+    width: 4rem;
+    /* padding: 0px 1rem 0px 1rem; */
+    padding-left: 1.5rem;
+}
+
+.card-title-price {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button.btn.btn-danger, button.btn.btn-success {
+    width: 4rem;
+}
+
+.apply-remove-button-group {
+    display: flex;
+    justify-content: space-evenly;
 }
